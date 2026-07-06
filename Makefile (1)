@@ -1,0 +1,60 @@
+.PHONY: help install dev-install up down test lint format init-db run-worker run-api
+
+help:
+	@echo ""
+	@echo "EpiSurveillance — Available commands"
+	@echo "-------------------------------------"
+	@echo "  make install      Install Python dependencies"
+	@echo "  make dev-install  Install with dev/test dependencies"
+	@echo "  make up           Start all Docker services"
+	@echo "  make down         Stop all Docker services"
+	@echo "  make init-db      Create database tables"
+	@echo "  make run-api      Run FastAPI server (local)"
+	@echo "  make run-worker   Run surveillance cycle worker (local)"
+	@echo "  make test         Run test suite"
+	@echo "  make lint         Lint with ruff"
+	@echo "  make format       Format with black"
+	@echo ""
+
+install:
+	pip install -r requirements.txt
+
+dev-install:
+	pip install -r requirements.txt
+	pip install ruff black mypy pytest-asyncio
+
+up:
+	docker-compose up -d
+	@echo ""
+	@echo "Services started:"
+	@echo "  API docs  → http://localhost:8000/api/docs"
+	@echo "  Dashboard → http://localhost:3000"
+	@echo "  Grafana   → http://localhost:3001  (admin/admin)"
+	@echo "  Neo4j     → http://localhost:7474"
+	@echo ""
+
+down:
+	docker-compose down
+
+init-db:
+	python -c "import asyncio; from scripts.init_db import main; asyncio.run(main())"
+
+run-api:
+	uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+
+run-worker:
+	python scripts/run_surveillance_cycle.py
+
+test:
+	pytest tests/ -v --asyncio-mode=auto --cov=. --cov-report=term-missing
+
+lint:
+	ruff check . --select=E,W,F --ignore=E501
+
+format:
+	black .
+
+cycle:
+	curl -X POST http://localhost:8000/api/cycle/trigger
+	@echo "Surveillance cycle triggered"
+EOF
