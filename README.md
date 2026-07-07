@@ -2,7 +2,7 @@
 
 > **LLMs for Automated Zoonotic Disease Surveillance from Social Media and News Feeds**
 
-[(https://github.com/sarahsayed697-dotcom/epi-surveillance/actions/workflows/ci.yml/badge.svg)](https://github.com/sarahsayed697-dotcom/epi-surveillance/actions)
+[![CI](https://github.com/sarahsayed697-dotcom/epi-surveillance/actions/workflows/ci.yml/badge.svg)](https://github.com/sarahsayed697-dotcom/epi-surveillance/actions)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green.svg)](https://fastapi.tiangolo.com)
 [![Claude API](https://img.shields.io/badge/Claude-3.5%20Sonnet-orange.svg)](https://anthropic.com)
