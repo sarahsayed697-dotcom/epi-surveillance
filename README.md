@@ -1,4 +1,4 @@
-# EpiSurveillance 🦠
+# EpiSurveillance 
 
 > **LLMs for Automated Zoonotic Disease Surveillance from Social Media and News Feeds**
 
@@ -15,7 +15,7 @@ scoring, fake news detection, and real-time alerting.
 
 ---
 
-## 🌍 Why This Project
+##  Why This Project
 
 Zoonotic diseases — infections that jump from animals to humans — account for over 60% of
 emerging infectious diseases globally. Early detection is critical, yet official reporting
@@ -25,7 +25,7 @@ before official notifications.
 
 ---
 
-## ✨ Features
+##  Features
 
 | Feature | Description |
 |---------|-------------|
@@ -49,7 +49,7 @@ PubMed        NER/Extract      Predictor        Kafka
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Option A — Demo (no Docker required)
 
@@ -96,7 +96,7 @@ make run-worker   # Terminal 2 — Surveillance cycle every 5 min
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 epi-surveillance/
 │
 ├── api/
@@ -140,7 +140,7 @@ epi-surveillance/
 
 ---
 
-## ⚙️ Environment Variables
+##  Environment Variables
 
 Copy `.env.example` to `.env` and fill in your values:
 
@@ -159,7 +159,7 @@ The platform runs with **only `ANTHROPIC_API_KEY`** — all other keys are optio
 
 ---
 
-## 🤖 AI Pipeline
+##  AI Pipeline
 Raw text (any language)
 ↓
 Text Processor
@@ -197,7 +197,7 @@ PostgreSQL + Neo4j + Elasticsearch + Dashboard
 
 ---
 
-## 🎯 Risk Classification
+##  Risk Classification
 
 | Level | Score | Criteria |
 |-------|-------|----------|
@@ -213,7 +213,7 @@ animal involvement · novel pathogen flag · severity · geographic spread
 
 ---
 
-## 🦠 Diseases Monitored
+##  Diseases Monitored
 Rabies          Avian Influenza H5N1    H7N9           Mpox
 Anthrax         Leptospirosis           Brucellosis    CCHF
 Ebola           Marburg                 Nipah          Hendra
@@ -222,7 +222,7 @@ Q Fever         COVID-19 variants       Disease X      Novel unknown pathogens
 
 ---
 
-## 🌐 API Reference
+## API Reference
 GET  /api/health                    System health check
 GET  /api/status                    All service statuses
 GET  /api/dashboard                 24-hour surveillance summary
@@ -242,7 +242,7 @@ Full interactive docs available at `http://localhost:8000/api/docs`
 
 ---
 
-## 🧪 Running Tests
+##  Running Tests
 
 ```bash
 make test
@@ -257,7 +257,7 @@ Pydantic schema enforcement, and async processing pipeline.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
@@ -274,7 +274,7 @@ Pydantic schema enforcement, and async processing pipeline.
 
 ---
 
-## 📊 Research Evaluation Metrics
+## Research Evaluation Metrics
 
 | Metric | Target | Description |
 |--------|--------|-------------|
@@ -290,7 +290,7 @@ Pydantic schema enforcement, and async processing pipeline.
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome. To contribute:
 
@@ -303,13 +303,13 @@ Please follow the existing code style and include tests for new features.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📚 Citation
+## Citation
 
 If you use EpiSurveillance in your research, please cite:
 
@@ -318,7 +318,7 @@ If you use EpiSurveillance in your research, please cite:
   title   = {EpiSurveillance: LLMs for Automated Zoonotic Disease Surveillance
              from Social Media and News Feeds},
   author  = {Sayed, Sarah},
-  year    = {2024},
+  year    = {2026},
   url     = {https://github.com/sarahsayed697-dotcom/epi-surveillance},
   license = {MIT}
 }
@@ -326,7 +326,7 @@ If you use EpiSurveillance in your research, please cite:
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Sarah Sayed**
 - GitHub: [@sarahsayed697-dotcom](https://github.com/sarahsayed697-dotcom)
@@ -336,4 +336,4 @@ If you use EpiSurveillance in your research, please cite:
 *Built with Claude AI (Anthropic) · FastAPI · PostgreSQL · Docker*
 ---
 
-## 🏗️ System Architecture
+
